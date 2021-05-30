@@ -1,4 +1,4 @@
-import { StringUtils } from "./Util/StringUtils";
+import { StringUtils } from "./util/string-utils";
 
 export interface IEntityConfiguration {
     sourceEntityName? : string;

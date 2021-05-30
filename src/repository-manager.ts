@@ -1,4 +1,4 @@
-import { Repository } from "./Repository";
+import { Repository } from "./repository";
 
 export class RepositoryManager {
     private static _instance: RepositoryManager;

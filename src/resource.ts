@@ -1,6 +1,6 @@
-import { GenericEntity } from "./GenericEntity";
-import { GenericEntityIdType } from "./GenericEntityIdType";
-import { Repository } from "./Repository";
+import { GenericEntity } from "./generic-entity";
+import { GenericEntityIdType } from "./generic-entity-id-type";
+import { Repository } from "./repository";
 
 export abstract class Resource<T extends GenericEntity = any> {
 

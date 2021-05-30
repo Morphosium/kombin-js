@@ -1,5 +1,5 @@
-import { EntityConfiguration } from "./EntityConfiguration";
-import { Repository } from "./Repository";
+import { EntityConfiguration } from "./entity-configuration";
+import { Repository } from "./repository";
 
 class Kombin {
     repositoryEntityMap = {};
