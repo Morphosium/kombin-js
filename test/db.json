@@ -1,0 +1,37 @@
+{
+  "Brand": [
+    {
+      "id": 1,
+      "name": "mercedes benz"
+    },
+    {
+      "id": 2,
+      "name": "audi"
+    },
+    {
+      "id": 3,
+      "name": "bmw"
+    },
+    {
+      "name": "tofaş",
+      "id": 6
+    }
+  ],
+  "Model": [
+    {
+      "id": 1,
+      "name": "tt",
+      "carBrandId": 2
+    },
+    {
+      "id": 2,
+      "name": "e250",
+      "carBrandId": 1
+    },
+    {
+      "id": 3,
+      "name": "m8 grand couple",
+      "carBrandId": 3
+    }
+  ]
+}
