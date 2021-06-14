@@ -1,10 +1,16 @@
 import { GenericEntity } from "./generic-entity";
+import { GenericEntityIdType } from "./generic-entity-id-type";
 import { ArrayUtils } from "./util/array-utils";
 
 export class Repository<T extends GenericEntity = any>
 {
     entityMap: { [id: number]: T } = {}
     entityArray: T[] = [];
+
+    findEntityRequest: (id) => Promise<T>;
+    postRequest: (object: T) => Promise<T | any>;
+    putRequest: (object: T) => Promise<T | any>;
+    deleteRequest : (id : GenericEntityIdType) => Promise<any>;
 
     getById(id: any): T | null {
         return this.entityMap[id];

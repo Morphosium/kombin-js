@@ -2,7 +2,7 @@ import { GenericEntity } from "./generic-entity";
 import { GenericEntityIdType } from "./generic-entity-id-type";
 import { Repository } from "./repository";
 
-export abstract class Resource<T extends GenericEntity = any> {
+export abstract class RepositoryWrapper<T extends GenericEntity = any> {
 
 
     private _repository: Repository;
@@ -10,7 +10,7 @@ export abstract class Resource<T extends GenericEntity = any> {
     set repository(repo: Repository) {
         this._repository = repo;
     }
-    
+
     get repository() {
         return this._repository;
     }
@@ -19,11 +19,18 @@ export abstract class Resource<T extends GenericEntity = any> {
         let a: GenericEntity;
         a = this._repository.getById(id);
         if (a != null) {
-            return await this.requestEntity(id);
+            const incoming = await this.requestEntity(id);
+            if ((incoming != null) && (incoming.id != null)) {
+                this._repository.putEntity(incoming);
+                return incoming;
+            }
+            else {
+                return null;
+            }
         }
     }
 
-    abstract requestEntity(id: GenericEntityIdType) : Promise<T>;
+    abstract requestEntity(id: GenericEntityIdType): Promise<T>;
 
     registerEntity(entity: T) {
         this._repository.putEntity(entity);

@@ -1,6 +1,6 @@
 import { StringUtils } from "./util/string-utils";
 
-export interface IEntityConfiguration {
+export interface IEntityFieldConfiguration {
     sourceEntityName? : string;
     entityName? : string;
     generalFieldName? : string;
@@ -9,7 +9,7 @@ export interface IEntityConfiguration {
     generalFieldPluralIdName? : string;
 }
 
-export class EntityConfiguration implements IEntityConfiguration {
+export class EntityFieldConfiguration implements IEntityFieldConfiguration {
     generalFieldName? : string;
     generalFieldPluralName? : string;
     generalFieldIdName? : string;

@@ -1,14 +1,14 @@
-import { EntityConfiguration } from "./entity-configuration";
+import { IEntityFieldConfiguration } from "./entity-field-configuration";
 import { Repository } from "./repository";
 
 class Kombin {
     repositoryEntityMap = {};
 
-    registerRepository(repo : Repository, entityFieldConfig : EntityConfiguration) {
+    registerRepository(repo : Repository, entityFieldConfig : IEntityFieldConfiguration) {
         this.putRepoWithConfiguration(repo, entityFieldConfig);
     }
 
-    putRepoWithConfiguration(repo: Repository<any>, entityFieldConfig: EntityConfiguration) {
+    putRepoWithConfiguration(repo: Repository<any>, entityFieldConfig: IEntityFieldConfiguration) {
         this.repositoryEntityMap[entityFieldConfig.entityName] = repo;
         this.repositoryEntityMap[entityFieldConfig.generalFieldIdName] = repo;
         this.repositoryEntityMap[entityFieldConfig.generalFieldName] = repo;
