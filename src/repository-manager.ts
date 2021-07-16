@@ -1,4 +1,5 @@
-import { Repository } from "./repository";
+import { IEntityFieldConfiguration } from "./entity-field-configuration";
+import { RepositoryWrapper } from "./repository-wrapper";
 
 export class RepositoryManager {
     private static _instance: RepositoryManager;
@@ -10,7 +11,7 @@ export class RepositoryManager {
         return RepositoryManager._instance;
     }
 
-    registerRepository(repo : Repository, en) {
-
+    registerRepositoryWrapper(repo: RepositoryWrapper, entityConfig: IEntityFieldConfiguration) {
+        
     }
 }
