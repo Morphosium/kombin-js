@@ -2,7 +2,7 @@ import { IEntityFieldConfiguration } from "./entity-field-configuration";
 import { Repository } from "./repository";
 
 class Kombin {
-    repositoryEntityMap = {};
+
 
     registerRepository(repo : Repository, entityFieldConfig : IEntityFieldConfiguration) {
         this.putRepoWithConfiguration(repo, entityFieldConfig);
