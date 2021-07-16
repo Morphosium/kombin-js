@@ -9,9 +9,9 @@ class Kombin {
     }
 
     putRepoWithConfiguration(repo: Repository<any>, entityFieldConfig: IEntityFieldConfiguration) {
-        this.repositoryEntityMap[entityFieldConfig.entityName] = repo;
-        this.repositoryEntityMap[entityFieldConfig.generalFieldIdName] = repo;
-        this.repositoryEntityMap[entityFieldConfig.generalFieldName] = repo;
+        // this.repositoryEntityMap[entityFieldConfig.entityName] = repo;
+        // this.repositoryEntityMap[entityFieldConfig.generalFieldIdName] = repo;
+        // this.repositoryEntityMap[entityFieldConfig.generalFieldName] = repo;
         
     }
 }
