@@ -1,6 +1,6 @@
-import { GenericEntity } from "./generic-entity";
+import { GenericEntity } from "../types/generic-entity";
 import { GenericEntityIdType } from "./generic-entity-id-type";
-import { ArrayUtils } from "./util/array-utils";
+import { ArrayUtils } from "../util/array-utils";
 
 export class Repository<T extends GenericEntity = any>
 {

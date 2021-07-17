@@ -1,4 +1,4 @@
-import { IEntityFieldConfiguration } from "./entity-field-configuration";
+import { IEntityFieldConfiguration } from "../types/entity-field-configuration";
 import { RepositoryWrapper } from "./repository-wrapper";
 
 export class RepositoryManager {
@@ -11,7 +11,7 @@ export class RepositoryManager {
         return RepositoryManager._instance;
     }
 
-    registerRepositoryWrapper(repo: RepositoryWrapper, entityConfig: IEntityFieldConfiguration) {
+    registerRepositoryWrapper(repoWrap: RepositoryWrapper, entityConfig: IEntityFieldConfiguration) {
         
     }
 }

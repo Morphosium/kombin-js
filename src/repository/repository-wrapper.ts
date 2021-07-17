@@ -1,5 +1,6 @@
-import { GenericEntity } from "./generic-entity";
-import { GenericEntityIdType } from "./generic-entity-id-type";
+import { EntityFieldConfiguration } from "../types/entity-field-configuration";
+import { GenericEntity } from "../types/generic-entity";
+import { GenericEntityIdType } from "../types/generic-entity-id-type";
 import { Repository } from "./repository";
 import { IRepositoryWrapperRequestResult } from "./repository-wrapper-request-result";
 
@@ -15,6 +16,10 @@ export abstract class RepositoryWrapper<T extends GenericEntity = any> {
     get repository() {
         return this._repository;
     }
+
+    generateConfiguration() {
+        
+    }   
 
     abstract getEntityRequest(id: GenericEntityIdType): Promise<IRepositoryWrapperRequestResult<T>>;
 
